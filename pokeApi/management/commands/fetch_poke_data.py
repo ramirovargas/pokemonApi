@@ -38,8 +38,7 @@ class Command(BaseCommand):
         self.save_pokemon(pokemon)
         return pokemon
 
-    def get_evolution_poke(self,pokemon,evolution):
-        # Segun entendi de la api solo me da la evolucion hacia arriba
+    def get_evolution_poke(self, pokemon, evolution):
         for evol_key, evol_value in evolution[0].items():
             if(evol_key=="is_baby"):
                 if(evol_value):
@@ -48,7 +47,23 @@ class Command(BaseCommand):
                     type="Evolution"
             if(evol_key=="species"):
                 name=list(evol_value.items())[0][1]
-                evolution=Evolution(id_evo = self.get_id_poke(name), name = name , pokemon = pokemon , type = type)
+                self.get_pokemon_char(name)
+                evolution=Evolution(id_evo = self.get_id_poke(name), name = name , pokemon = pokemon , type = type ,level=1)
+                self.save_evolution(evolution)
+            if(evol_key=="evolves_to"):
+                self.get_second_evolution_poke(pokemon,evol_value)
+
+    def get_second_evolution_poke(self, pokemon, evolution):
+        for evol_key, evol_value in evolution[0].items():
+            if(evol_key=="is_baby"):
+                if(evol_value):
+                    type="Preevolution"
+                else:
+                    type="Evolution"
+            if(evol_key=="species"):
+                name=list(evol_value.items())[0][1]
+                self.get_pokemon_char(name)
+                evolution=Evolution(id_evo = self.get_id_poke(name), name = name , pokemon = pokemon , type = type ,level=2)
                 self.save_evolution(evolution)
 
     def get_id_poke(self,name):

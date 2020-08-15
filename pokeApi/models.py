@@ -12,3 +12,4 @@ class Evolution(models.Model):
     name = models.CharField(max_length=30)
     pokemon = models.ForeignKey(Pokemon, on_delete=models.CASCADE)
     type = models.CharField(max_length=30)
+    level = models.IntegerField(default=0)
