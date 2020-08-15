@@ -45,4 +45,8 @@ Decisiones para obtener datos de los pokemon:
 *   Se añade campo level para saber el nivel del pokemon en la relacion con su evolucion
 *   Se calcula con el dato del pokemon que otro hay con ese Id y se calcula si es evolucion o Preevolucion
 
+
+Oprtunidades de mejora
+*   reutilizar mas metodos.
+*   Añadir recursion en la optencion de evoluciones
 Nota: Se añade directorio venv o puedes usar tu propio ambiente virtual instalando las librerias de requirement.txt
