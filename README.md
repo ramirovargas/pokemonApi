@@ -11,7 +11,7 @@ Vary: Accept
 
 
 Ejemplo respuesta 
-'''
+```
 {
     "pokemon_data": {
         "id_poke": 7,
@@ -29,4 +29,4 @@ Ejemplo respuesta
         }
     ]
 }
-'''
+```
