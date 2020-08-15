@@ -30,3 +30,5 @@ Ejemplo respuesta
     ]
 }
 ```
+
+Nota: Se añade directorio venv o puedes usar tu propio ambiente virtual instalando las librerias de requirement.txt
