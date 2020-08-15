@@ -7,7 +7,7 @@ python manage.py fetch_poke_data <id_evolution_chain>
 Ejemplo de peticion
 
 Pokemon Element
-GET /pokemon/charmander
+GET /pokemon/charmeleon
 HTTP 200 OK
 Allow: OPTIONS, GET
 Content-Type: application/json
@@ -18,24 +18,22 @@ Ejemplo respuesta
 ```
 {
     "pokemon_data": {
-        "id_poke": 4,
-        "name": "charmander",
-        "weight": 85,
-        "height": 6,
-        "base_stats": 39
+        "id_poke": 5,
+        "name": "charmeleon",
+        "weight": 190,
+        "height": 11,
+        "base_stats": 58
     },
     "evolution_data": [
         {
-            "id_evo": 5,
-            "name": "charmeleon",
-            "type": "Evolution",
-            "poke": "charmander"
+            "id_evo": 4,
+            "name": "charmander",
+            "type": "Preevolution"
         },
         {
             "id_evo": 6,
             "name": "charizard",
-            "type": "Evolution",
-            "poke": "charmander"
+            "type": "Evolution"
         }
     ]
 }
