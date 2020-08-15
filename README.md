@@ -49,4 +49,5 @@ Decisiones para obtener datos de los pokemon:
 Oprtunidades de mejora
 *   reutilizar mas metodos.
 *   Añadir recursion en la optencion de evoluciones
-Nota: Se añade directorio venv o puedes usar tu propio ambiente virtual instalando las librerias de requirement.txt
+
+## Nota: Se añade directorio venv o puedes usar tu propio ambiente virtual instalando las librerias de requirement.txt
