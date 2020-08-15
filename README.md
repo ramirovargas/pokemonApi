@@ -2,7 +2,7 @@
 Para la ejecucion del comando:
 
 ```
-python manage.py fetch_poke_data ** <id_evolution_chain> **
+python manage.py fetch_poke_data <id_evolution_chain>
 ```
 
 Ejemplo de peticion
