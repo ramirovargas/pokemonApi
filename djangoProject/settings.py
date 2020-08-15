@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pokeApi'
+    'pokeApi',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
