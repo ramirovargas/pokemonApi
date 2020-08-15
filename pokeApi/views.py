@@ -28,9 +28,18 @@ def pokemon_element(request, name):
                 id_evo=evolution_from.first().id_evo-1
             else:
                 id_evo = evolution_from.first().id_evo-2
-
             evolution=Evolution(id_evo = id_evo, name = poke_origin.name , pokemon = poke_origin , type = "Preevolution" ,level=0)
             result.append(EvolutionSerializer(evolution).data)
+            third_evolution=get_evolutions(poke_origin)
+            if (evolution_from.first().level == 1):
+                for j in third_evolution:
+                    if(j.level==2):
+                        result.append(EvolutionSerializer(j).data)
+            else:
+                for j in third_evolution:
+                    if(j.level==1):
+                        setattr(j, "type", "Preevolution")
+                        result.append(EvolutionSerializer(j).data)
 
         serializer_poke = PokemonSerializer(pokemon)
         data_set = {"pokemon_data": serializer_poke.data,"evolution_data":result}
